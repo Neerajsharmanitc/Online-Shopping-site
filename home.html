@@ -1,0 +1,111 @@
+<html>
+<head><title>Homepage</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<div id="header">
+ShopPay.com
+</div>
+
+<div id="middle">
+<div class="tab">
+  <button class="tablinks" onclick="tabs_manager(event, 'home')" id="defaultOpen">Home</button>
+  <button class="tablinks" onclick="tabs_manager(event, 'signin')">SignIn</button>
+  <button class="tablinks" onclick="tabs_manager(event, 'signup')">SignUp</button>
+  <button class="tablinks" onclick="tabs_manager(event, 'products')">Products</button>
+  <button class="tablinks" onclick="tabs_manager(event, 'about')">About</button>
+</div>
+
+<!-- Tab content -->
+<div id="home" class="tabcontent">
+  <img src="home.jpeg" height=90%>
+</div>
+<!--------------------------------------LOG IN PAGE---------------------------------->
+<div id="signin" class="tabcontent">
+<div id="middle">
+<table align="center" border=2 bordercolor="blue" cellpadding=5>
+<form method="post">
+<p style="font-size:40px; align:center;">Sign In</p>
+<tr>	<td>Email or Username : <td><input type="email">
+<tr>	<td>Password : <td><input type="password">
+<tr>	<td align="center" colspan=2><input type="button" value="login">
+
+</form>
+</table>
+</div>
+<div id="space"></div><div id="space"></div>
+</div>
+<!-----------------------------------SIGN UP PAGE---------------------------------->
+<div id="signup" class="tabcontent">
+  <fieldset>
+    
+        <legend align="center" style="color:red"><b>Personal Iformation</b></legend>
+
+
+<table align="center" border=3 bordercolor="blue" cellpadding=5 width="35%">
+<form>
+
+<tr>    <td>First name:<td><input type="text">
+<tr>    <td>Last Name : <td><input type="text">
+<tr>    <td>User Name : <td><input type="text>">
+<tr>    <td>Password  : <td><input type="password">
+<tr>    <td>Retype-Password : <td><input type="password"> 
+<tr>    <td>Gender<td><input type="radio" name="gender"> Male
+                <input type="radio" name="gender"> Female
+                 <input type="radio" name="gender"> Other   
+<tr>    <td>Email : <td><input type="email">    
+<tr>    <td>Mobile Number : <td><input type="text">    
+<tr>    <td>Pin Code : <td><input type="text">
+    <tr>    <td colspan="2" align="center"><input type="Submit" value="Submit">
+            <input type="reset" value="Reset">
+    </fieldset>
+</form>
+</table>
+  
+</div>
+
+<!--------------------------------------ABOUT PAGE---------------------------------->
+<div id="about" class="tabcontent">
+<h1>Shopping Website Created By</h1>
+<h1>Neeraj Kumar Sharma</h1>
+<h1>M170571CA</h1><div id="space"></div>
+</div>
+<!----------------------------------------------------------------------------------->
+
+<div id="products" class="tabcontent">
+<img src="P1.jpg" height=40% width=30%>
+<img src="P2.jpg" height=40% width=30%>
+<img src="P3.jpg" height=40% width=30%>
+<hr color="red">
+<img src="P4.jpg" height=40% width=30%>
+<img src="P5.jpg" height=40% width=30%>
+<img src="P6.jpg" height=40% width=30%>
+
+</div>
+
+</div>
+<div id="footer" align="center">
+AN ASSIGNMENT SUBMITTED BY NEERAJ KUMAR SHARMA M170571CA
+</div>
+</body>
+
+<script>
+function tabs_manager(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+	
+}
+document.getElementById("defaultOpen").click();
+</script>
+
+</html>
